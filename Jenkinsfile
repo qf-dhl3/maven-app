@@ -22,7 +22,7 @@ pipeline {
         }
         stage('Build') {
             steps {
-                sh "mvn -Dmaven.test.failure.ignore=true clean package"
+                sh "mvn -Dmaven.test.failure.ignore=true -s settings.xml clean deploy"
             }
 
             post {
