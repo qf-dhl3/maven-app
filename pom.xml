@@ -75,7 +75,7 @@
     <distributionManagement>
     <repository>
       <uniqueVersion>false</uniqueVersion>
-      <id>codhl3app-releasesrp1</id>
+      <id>dhl3app-releases</id>
       <name>dhl3app-releases</name>
       <url>http://15.206.89.221:8081/repository/dhl3app-releases/</url>
       <layout>default</layout>
