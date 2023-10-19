@@ -1,0 +1,33 @@
+version: '3'
+services:
+  jenkins-server:
+    image: jenkins/jenkins:lts
+    container_name: jenkins-server
+    ports:
+      - "8080:8080"
+      - "50000:50000"
+    volumes:
+      - jenkins_home:/var/jenkins_home
+    networks:
+      - jenkinsnet
+    environment:
+      - JENKINS_SLAVE_AGENT_PORT=50000
+    restart: always
+ 
+  jenkins-agent:
+    image: jenkins/jnlp-slave:latest
+    container_name: jenkins-agent
+    networks:
+      - jenkinsnet
+    depends_on:
+      - jenkins-server
+    environment:
+      - JENKINS_URL=http://jenkins-server:8080
+    restart: always
+ 
+networks:
+  jenkinsnet:
+    driver: bridge
+ 
+volumes:
+  jenkins_home:
