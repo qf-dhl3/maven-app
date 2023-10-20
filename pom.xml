@@ -77,14 +77,14 @@
       <uniqueVersion>false</uniqueVersion>
       <id>dhl3app-releases</id>
       <name>dhl3app-releases</name>
-      <url>http://15.206.89.221:8081/repository/dhl3app-releases/</url>
+      <url>http://172.31.6.72:8081/repository/dhl3app-releases/</url>
       <layout>default</layout>
     </repository>
     <snapshotRepository>
       <uniqueVersion>true</uniqueVersion>
       <id>dhl3app-snapshots</id>
       <name>dhl3app-snapshots</name>
-      <url>http://15.206.89.221:8081/repository/dhl3app-snapshots/</url>
+      <url>http://172.31.6.72:8081/repository/dhl3app-snapshots/</url>
       <layout>legacy</layout>
     </snapshotRepository>
   </distributionManagement>
