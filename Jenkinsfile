@@ -17,7 +17,7 @@ pipeline {
                         -Dsonar.projectKey=mavenapp \
                         -Dsonar.projectName='mavenapp' \
                         -Dsonar.host.url=http://172.31.11.244:9000 \
-                        -Dsonar.token="${SONAR_TOKEN}"
+                        -Dsonar.token='${SONAR_TOKEN}'"
                 }
             }
         }
